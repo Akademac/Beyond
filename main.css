@@ -1,0 +1,1485 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+:root {
+    --mainWhite : #fff;
+    --mainBlack: #000;
+    --lighterBlack: #070707;
+    --moreLightBlack: #050505;
+    --lightGrey: rgb(190, 190, 190);
+    --mainRed: red;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    color: var(--mainWhite);
+}
+
+body {
+    font-family: 'Anton', sans-serif;
+    background-color: var(--mainBlack);
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.wraper {
+    animation-name: go_astr_wraper;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.wraper_off {
+    animation-name: go_wraper;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* Main div */
+
+#menu_lines {
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--mainWhite);
+    transition: 3s all;
+}
+
+#menu_bars_div {
+    z-index: 100;
+    overflow: hidden;
+    left: 50%;
+    top: 2%;
+    transform: translate(-50%, -2%);
+    margin: 0px auto;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+}
+
+#main_div_texts {
+    margin-top: 45%;
+    margin-left: 10%;
+    transform: scale(.3);
+    animation-name: main_div_txt;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+}
+
+#main_div_texts > h1 {
+    font-size: 5rem;
+    letter-spacing: 30px;
+    font-weight: bold;
+} 
+
+#main_div_texts > p {
+    font-size: 1.5rem;
+}
+
+#main_nav_ul {
+    text-align: center;
+    position: absolute;
+    list-style: none;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 4rem auto;
+}
+
+#main_nav_ul > li {
+    font-size: 2rem;
+    padding-top: 3rem;
+    cursor: pointer;
+}
+
+#main_nav_ul > li:hover {
+    text-decoration: underline;
+}
+
+#right_dots {
+    display: inline;
+    position: fixed;
+    right: 5%;
+    top: 18%;
+    transform: translate(0, -18%, -5%);
+    z-index: 110;
+    overflow: hidden;
+    height: 50rem;
+}
+
+.nav_dots {
+    display: block;
+    border: 5px solid var(--mainWhite);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    margin-top: 2rem;
+}
+
+#main_div {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr );
+}
+
+.left_side {
+    background-color: var(--lighterBlack);
+    float: left;
+    transform: rotateY(0deg);
+    transition: 3s all;
+}
+
+
+.right_side {
+    background-image: url('Images/right_side_2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotateY(0deg);
+    transition: 3s all;
+}
+
+.left_side_go {
+    transform: rotateY(45deg);
+}
+
+.right_side_go {
+    transform: rotateY(-45deg);
+}
+
+.arrow_down {
+    position: absolute;
+    left: 50%;
+    top: 95%;
+    transform: translate(-50%, -95%);
+    z-index: 110;
+    font-size: 2rem;
+    animation-name: go_arrow;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+/* Second div */
+
+#second_div {
+    width: 100%;
+    position: relative;
+}
+
+#video {
+    width: 100%;
+    height: auto;
+}
+
+#txt_over_video {
+    position: absolute;
+    opacity: .7;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#txt_over_video > h1 {
+    font-size: 8rem;
+    letter-spacing: 30px;
+}
+
+#txt_over_video > p {
+    font-size: 1.2rem;
+}
+
+/* Third Div */
+
+#third_div {
+    width: 100%;
+    height: 35rem;
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+#third_div_first {
+    background: url('Images/main_astronaut_2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+#third_div_second {
+    text-align: center;
+    position: relative;
+    background-color: transparent;
+}
+
+#crew {
+    display: inline;
+    float: right;
+    margin-right: 20rem;
+    margin-top: 30rem;  
+    display: none;
+}
+
+#crew > h1 {
+    letter-spacing: 8px;
+    font-size: 3rem;
+    margin-bottom: .5rem;
+}
+
+.learn_more {
+    background-color: transparent;
+    border: 1px solid var(--mainWhite);
+    display: inline;
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: 2s all;
+    margin-right: 1rem;
+}
+
+.learn_more:hover {
+    background-color: var(--mainWhite);
+    color: var(--mainBlack);
+}
+
+.desc_text {
+    animation-name: go_text;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    display: inline;
+}
+
+.astronauts_wraper {
+    display: none;
+}
+
+.astronauts_wraper_on {
+    animation-name: go_astr_wraper;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+#astronauts {
+    width: 100%;
+    height: 30rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.astonauts_div {
+    text-align: center;
+}
+
+.astonauts_div > h3 {
+    margin-top: -1rem;
+    letter-spacing: 4px;
+    font-size: 2rem;
+}
+
+.astonauts_div > p {
+    font-family: 'Roboto', sans-serif;
+    font-size: .9rem;
+}
+
+.all_astronauts {
+    transform: scale(.9);
+}
+
+.x {
+    float: right;
+    display: inline;
+    font-size: 2rem;
+    margin: 1rem;
+    cursor: pointer;
+    z-index: 2000;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+/* Fourth Div */
+
+#fourth_div {
+    width: 100%;
+    height: 40rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#fourth_div_first {
+    position: relative;
+}
+
+#about {
+    margin-top: 32rem;
+    margin-left: 5rem;
+    display: none;
+}
+
+#about > h1 {
+    letter-spacing: 8px;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#about > p {
+    margin-bottom: 1.5rem;
+}
+
+#rocket {
+    color: var(--mainWhite);
+    display: inline;
+    font-size: 15rem;
+    position: absolute;
+    left: 65%;
+    top: 45%;
+    transform: rotateZ(-90deg);
+    animation-name: go_rocket;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.trip_wraper {
+    text-align: center;
+    display: none;
+}
+
+.trip_wraper > h1 {
+    letter-spacing: 5px;
+    display: inline;
+}
+
+.trip_x {
+    position: absolute;
+    font-size: 2rem;
+    right: 2rem;
+    top: 1rem;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#trip_div {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.trip_divs {
+    width: 20rem;
+    height: 30rem;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-rows: 60% 10% 30%;
+}
+
+#trip_img {
+    transform: scale(1.5);
+    margin: 5rem auto;
+    animation-name: trip_go_liftoff;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+}
+
+.liftoff_go {
+    animation-name: trip_go_liftoff;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+}
+
+
+.trip_divs > h3 {
+    letter-spacing: 3px;
+}
+
+.trip_divs > p {
+    font-size: .8rem;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.left_arrow {
+    padding-right: 5px;
+}
+
+.right_arrow {
+    padding-left: 5px;
+}
+
+.left_arrow:hover, .right_arrow:hover {
+    cursor: pointer;
+    transform: scale(1.3);
+}
+
+/* Fifth Div */
+
+#fifth_div {
+    width: 100%;
+    height: 10rem;
+    overflow: hidden;
+    text-align: center;
+    background-color: #070707;
+    padding-top: 4rem;
+    position: relative;
+}
+
+#fifth_div > h1 {
+    letter-spacing: 5px;
+    font-size: 2.5rem;
+}
+
+#fifth_div_arrow {
+    font-size: 2rem;
+}
+
+/* Sixth Div */
+
+#sixth_div {
+    width: 100%;
+    height: 30rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#sixth_div_left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#calendar_div {
+    width: 27rem;
+    height: 22em;
+    color: var(--mainWhite);
+    border: 2px solid var(--mainWhite);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 2px;
+    text-align: center;
+    background-color: var(--mainWhite);
+}
+
+.dates {
+    background-color: var(--mainBlack);
+    color: var(--mainWhite);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dates:hover {
+    cursor: pointer;
+    color: var(--lightGrey);
+    transform: scale(1.1);
+}
+
+.days {
+    background-color: var(--mainBlack);
+    color: var(--lightGrey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blank {
+    background-color: var(--mainBlack);
+    color: var(--mainRed);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sixth_div_right {
+    position: relative;
+}
+
+.res {
+    display: inline;
+    float: right;
+    right: 15rem;
+    top: 25rem;
+    position: absolute;     
+}
+
+.res > h1 {
+    margin-bottom: 1rem;
+    letter-spacing: 5px;
+    font-size: 3rem;
+}
+
+#form {
+    margin: 8rem auto;
+    display: block;
+    padding-left: 2rem;
+    vertical-align: middle;
+}
+
+#form > input {
+    background-color: var(--mainBlack);
+    color: var(--mainWhite);
+    border: none;
+    border-bottom: 1px solid var(--mainWhite);
+    margin-left: 6rem;
+    margin-top: .5rem;
+    display: block;
+    font-size: 1.2rem;
+    padding: .2rem;
+}
+
+#day_in_h {
+    background-color: var(--mainBlack);
+    color: var(--mainWhite);
+    border: none;
+    border-bottom: 1px solid var(--mainWhite);
+    margin-left: 6rem;
+    margin-top: .5rem;
+    display: block;
+    font-size: 1.2rem;
+    padding: .2rem;
+    width: 10rem;
+    font-family: 'Arial';
+}
+
+.day_arrow {
+    margin-right: 1rem;
+    display: inline;
+    animation-name: go_day_arr_left;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.day_arrow_up {
+    margin-right: 1rem;
+    display: none!important;
+    animation-name: go_day_arr_up;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+input:focus {
+    outline: none;
+}
+
+#form > button {
+    background-color: var(--mainBlack);
+    color: var(--mainWhite);
+    padding: 5px 15px;
+    outline: none;
+    border: 1px solid var(--mainWhite);
+    margin-top: 1rem;
+    font-family: 'Anton', sans-serif;
+    margin-left: 6rem;
+}
+
+#date_input {
+    width: 10rem;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+#form > button:hover {
+    background-color: var(--mainWhite);
+    color: var(--mainBlack);
+    transition: 2s all;
+    cursor: pointer;
+}
+
+.date_wraper {
+    display: none;
+    position: absolute;
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    height: 10rem;
+    background-color: var(--moreLightBlack);
+}
+
+#footer_div {
+    display: inline;
+    margin: 4rem;
+    padding-top: 2rem;
+}
+
+#footer_div > p {
+    display: inline;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    margin-bottom: -2rem;
+}
+
+#footer_ul {
+    float: right;
+    margin-right: 5rem;
+    margin-top: 2rem;
+    list-style: none;
+}
+
+#footer_ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* For Visibility */
+
+#vis_crew {
+    display: inline-block;
+    background-color: transparent;
+    width: 2rem;
+    height: 2rem;
+    z-index: 5000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#vis_about_trip {
+    display: inline-block;
+    background-color: transparent;
+    width: 2rem;
+    height: 2rem;
+    z-index: 5000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#vis_res {
+    display: inline-block;
+    background-color: transparent;
+    width: 2rem;
+    height: 2rem;
+    z-index: 5000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+
+
+
+
+                                            /* Media queris */
+                                            
+@media screen and (max-width: 1200px) {
+
+/* Second Div */
+
+    #txt_over_video > h1 {
+        font-size: 6rem;
+    }
+
+    #txt_over_video > p {
+        font-size: 1.2rem;
+    }
+
+/* Third Div */
+
+    #third_div {
+        grid-template-columns: 70% 30%;
+    }
+
+    #crew {
+        margin-right: 10rem;
+    }
+
+/* Astronauts */
+
+    #astronauts {
+        width: 100%;
+        height: 70rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+        
+}
+
+
+
+@media screen and (max-width: 1125px) {
+
+/* Main Div */
+
+    #main_div_texts > h1 {
+        font-size: 3rem;
+    } 
+
+    #main_nav_ul > li {
+        font-size: 1.2rem;
+    }
+
+/* Second Div */
+
+    #txt_over_video > h1 {
+        font-size: 5rem;
+    }    
+
+
+/* Sixth Div */
+
+    #sixth_div {
+        width: 100%;
+        height: 30rem;
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+
+    .res > h1 {
+        margin-bottom: 1rem;
+        letter-spacing: 5px;
+        font-size: 2.5rem;
+    }
+
+
+}
+
+@media screen and (max-width: 1000px) {
+/* Third Div */
+
+    #crew {
+        margin-right: 5rem;
+        float: left;
+    } 
+    
+    #crew > h1 {
+        letter-spacing: 5px;
+        font-size: 3rem;
+        margin-bottom: .5rem;
+    }
+
+    .learn_more {
+        margin-right: 0rem;
+    }
+    
+}
+
+@media screen and (max-width: 950px) {
+    
+/* Third Div */
+
+    #third_div {
+        width: 100%;
+        height: 35rem;
+        display: grid;
+        grid-template-columns: 1% 99%;
+    }
+
+    #third_div > #third_div_first {
+        order: 2;
+        background-attachment: fixed;
+    }
+
+    #third_div > #third_div_second {
+        order: 1;
+        background: transparent;
+    }
+
+    #crew {
+        display: inline;
+        float: right;
+        margin-right: -10rem;
+        margin-top: 20rem;  
+    }
+
+    #vis_crew { 
+        left: 3690%;
+    }
+
+/* Fourth Div */
+
+    #about {
+        margin-top: 32rem;
+        margin-left: 3rem;
+        display: none;
+    }
+
+}
+
+                                            
+@media screen and (max-width: 920px) {
+
+/* Second Div */
+
+    #txt_over_video > h1 {
+        font-size: 4rem;
+        letter-spacing: 20px;
+    }
+    
+    #txt_over_video > p {
+        font-size: 1rem;
+    }
+
+/* Sixth Div */
+
+    #sixth_div {
+        width: 100%;
+        height: 45rem;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 70% 30%;
+    }
+
+    #sixth_div_right {
+        text-align: center;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20rem;
+    }
+
+    .res {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        float: left;
+    }
+
+    .res > h1 {
+        margin-bottom: 1rem;
+        letter-spacing: 5px;
+        font-size: 2.5rem;
+    }
+
+    #form {
+        margin: -22rem auto;
+        display: block;
+        padding-left: 0rem;
+        vertical-align: middle;
+    }
+
+    #form > input {
+        margin-left: 0rem;
+    }
+
+    #day_in_h {
+        margin-left: 0rem;
+    }
+
+    .day_arrow {
+        display: none!important;
+    }
+
+    .day_arrow_up {
+        display: inline!important;
+    }
+
+    #form > button {
+        margin-left: 0rem;
+    }
+
+    
+}
+
+@media screen and (max-width: 800px) {
+  
+/* Main Div */
+    
+    #main_div_texts > p {
+        font-size: 1.2rem;
+    } 
+
+    #main_div_texts {
+        margin-top: 65%;
+    }
+
+/* Fourth Div */
+        
+    #rocket {
+        font-size: 13rem;
+        left: 45%;
+        top: 55%;
+        opacity: .6;
+    }
+ 
+/*  Fifth Div  */
+
+    #fifth_div > h1 {
+        letter-spacing: 5px;
+        font-size: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 780px) {
+    /* Main Div */
+    
+    #main_div_texts > h1 {
+        font-size: 2rem;
+    } 
+    
+}
+
+@media screen and (max-width: 700px) {
+
+    /* Main Div */
+    
+    #main_div_texts > h1 {
+        font-size: 1.5rem;
+        letter-spacing: 15px;
+    } 
+    
+    #main_div_texts > p {
+        font-size: 0.8rem;
+    } 
+    
+    #main_nav_ul > li {
+        font-size: 1rem;
+    }
+
+/* Second Div */
+
+    #video {
+        width: 100%;
+        height: 40rem;
+    }
+
+    #txt_over_video > h1 {
+        font-size: 3rem;
+        letter-spacing: 20px;
+    }
+    
+    #txt_over_video > p {
+        font-size: .8rem;
+    }
+
+/* Astronauts */
+
+    #astronauts {
+        width: 100%;
+        height: 140rem;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: repeat(4, 1fr);
+    }
+        
+
+
+    
+}
+
+@media screen and (max-width: 600px) {
+
+/* Main Div */
+
+    #main_div_texts {
+        margin-top: 75%;
+    }
+    
+/* Second Div */
+
+#txt_over_video > h1 {
+        font-size: 2.5rem;
+        letter-spacing: 15px;
+    }
+    
+    #txt_over_video > p {
+        font-size: .6rem;
+    }
+
+ 
+/*  Fifth Div  */
+
+    #fifth_div {
+        width: 100%;
+        height: 6rem;
+    }
+
+    #fifth_div > h1 {
+        letter-spacing: 5px;
+        font-size: 1.5rem;
+    }    
+
+}
+
+@media screen and (max-width: 500px) {
+/* Main Div */
+
+    #main_div_texts {
+        margin-top: 105%;
+    }
+
+    #main_nav_ul > li {
+        font-size: .8rem;
+    }
+
+    .nav_dots {
+        width: 1rem;
+        height: 1rem;
+    }
+
+/* Second Div */
+
+    #video {
+        width: 100%;
+        height: 40rem;
+    }
+    
+    #txt_over_video > h1 {
+        font-size: 2rem;
+        letter-spacing: 10px;
+    }
+
+    #txt_over_video > p {
+        font-size: .5rem;
+    }
+    
+
+    /* Sixth Div */
+
+    #sixth_div {
+        width: 100%;
+        height: 35rem;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 60% 40%;
+    }
+
+    #calendar_div {
+        width: 20rem;
+        height: 15em;
+    }
+    
+
+    #sixth_div_right {
+        text-align: center;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20rem;
+    }
+
+    .res {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        float: left;
+    }
+
+    .res > h1 {
+        margin-bottom: 1rem;
+        letter-spacing: 5px;
+        font-size: 2.5rem;
+    }
+
+    #form {
+        margin: -22rem auto;
+        display: block;
+        padding-left: 0rem;
+        vertical-align: middle;
+    }
+
+    #form > input {
+        margin-left: 0rem;
+    }
+
+    #day_in_h {
+        margin-left: 0rem;
+    }
+
+    .day_arrow {
+        display: none!important;
+    }
+
+    .day_arrow_up {
+        display: inline!important;
+    }
+
+    #form > button {
+        margin-left: 0rem;
+    }
+
+/* Footer  */
+
+    #footer_div {
+        margin: 1rem;
+    }
+    
+    #footer_div > p {
+        display: inline;
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+    
+    #footer_ul {
+        float: right;
+        margin-right: 1rem;
+        margin-top: 2rem;
+        list-style: none;
+    }            
+
+}
+
+@media screen and (max-width: 430px) {
+/* Fourth Div */
+        
+    #rocket {
+        font-size: 10rem;
+        left: 45%;
+        top: 105%;
+        opacity: .6;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+/* Main Div */
+
+    #main_div_texts > h1 {
+        font-size: 1.2rem;
+        letter-spacing: 15px;
+    } 
+
+    #main_div_texts > p {
+        font-size: 0.6rem;
+    } 
+    
+    #main_div_texts {
+        margin-top: 125%;
+    }
+    
+    #main_nav_ul > li {
+        font-size: .7rem;
+    }
+
+/* Fifth Div */
+
+    #fifth_div > h1 {
+        letter-spacing: 2px;
+        font-size: 1.3rem;
+    }
+
+}
+
+@media screen and (max-width: 365px) {
+
+/* Main Div */
+
+    #main_div_texts > h1 {
+        font-size: 1.2rem;
+        letter-spacing: 10px;
+    } 
+
+/* Second Div */
+
+    #video {
+        width: 100%;
+        height: 40rem;
+    }
+
+    #txt_over_video > h1 {
+        font-size: 1.5rem;
+        letter-spacing: 8px;
+    }
+
+    #txt_over_video > p {
+        font-size: .4rem;
+    }
+
+/* Fourth Div  */
+            
+    #rocket {
+        font-size: 7rem;
+        left: 45%;
+        top: 105%;
+        opacity: .6;
+    }
+
+/* Fifth Div */
+
+    #fifth_div > h1 {
+        letter-spacing: 2px;
+        font-size: 1rem;
+    }
+    
+    .x {
+        margin: .5rem;
+    }
+
+    .trip_x {
+        position: absolute;
+        font-size: 2rem;
+        right: 1rem;
+        top: 1rem;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    .trip_divs > p {
+        letter-spacing: 1px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    #trip_p {
+        width: 10rem;
+        margin: 0rem auto;
+    }
+    
+
+/* Sixt Div  */
+        
+    #calendar_div {
+        width: 15rem;
+        height: 10em;
+    }
+
+}
+
+@media screen and (max-width: 340px) {
+
+/* Main Div */
+
+    #main_div_texts > h1 {
+        font-size: 1.2rem;
+        letter-spacing: 10px;
+    } 
+
+    #main_div_texts {
+        margin-top: 155%;
+    }
+
+        
+    #main_nav_ul > li {
+        font-size: .5rem;
+    }
+
+    .trip_wraper > h1 {
+        letter-spacing: 2px;
+        display: inline;
+    }
+
+/* Sixth Div */
+
+    .res > h1 {
+        margin-bottom: 1rem;
+        letter-spacing: 5px;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+/* Main Div */
+
+    #main_div_texts > h1 {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    } 
+    
+     #main_div_texts {
+        margin-top: 175%;
+    }
+            
+    #main_nav_ul > li {
+        font-size: .5rem;
+    }
+
+/* Sixt Div  */
+        
+    #calendar_div {
+        width: 13rem;
+        height: 8rem;
+    }
+
+    .dates, .blank, .days {
+        font-size: .7rem;
+    }
+}  
+
+@media screen and (max-width: 280px) {
+
+/* Main Div */
+
+    #main_div_texts > h1 {
+        font-size: 1rem;
+        letter-spacing: 5px;
+    } 
+
+    #main_div_texts {
+        margin-top: 185%;
+    }
+
+    
+    #main_nav_ul > li {
+        font-size: .5rem;    
+    }       
+
+/* Second Div */
+
+    #txt_over_video > h1 {
+        font-size: 1.5rem;
+        letter-spacing: 3px;
+    }
+}
+
+
+@media screen and (max-width: 230px) {
+
+/* Second Div */
+       
+    #txt_over_video > h1 {
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+    }
+}    
+
+@media screen and (max-width: 200px) {
+
+/* Second Div */
+           
+    #txt_over_video > h1 {
+        font-size: 1rem;
+    }
+
+    #txt_over_video > p {
+        font-size: .3rem;
+    }
+}
+
+@media screen and (max-width: 180px) {
+
+/* Second Div */
+               
+    #txt_over_video > h1 {
+        font-size: .8rem;
+    }
+    
+    #txt_over_video > p {
+        font-size: .2rem;
+    }
+}    
+         
+
+                                                                    /* Key Frames */
+
+@keyframes main_div_txt {
+    0% {
+        transform: scale(.3);
+    }
+
+    90% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes go_arrow {
+    0% {
+        transform: translate(-50%, -95%);
+    }
+
+    50% {
+        transform: translate(-50%, -75%);
+    }
+
+    100% {
+        transform: translate(-50%, -95%);
+    }
+}
+
+@keyframes go_rocket {
+    0% {
+        top: 45%;
+    }
+
+    100% {
+        top: 10%;
+    }
+}
+
+@keyframes rotate_nums {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(90deg);
+    }
+}
+
+@keyframes go_text {
+    0% {
+        transform: translateY(0rem);
+    }
+
+    100% {
+        transform: translateY(-15rem);
+    }
+}
+
+@keyframes go_wraper {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes go_astr_wraper {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }    
+}
+
+@keyframes trip_go_liftoff {
+    0% {
+        transform: scale(1.5) translateY(0);
+    }
+
+    100% {
+        transform: scale(1.5) translateY(-1rem);
+    }
+}
+
+@keyframes go_day_arr_left {
+    0% {
+        transform: translateX(0rem);
+    }
+    100% {
+        transform: translateX(-.4rem);
+    }
+}
+
+
+@keyframes go_day_arr_up {
+    0% {
+        transform: translateY(0rem);
+    }
+    100% {
+        transform: translateY(-.4rem);
+    }
+}
+
